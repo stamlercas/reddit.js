@@ -120,6 +120,12 @@
     });
   };
 
+  reddit.user = function (username) {
+    return fetch({
+      resource: "user/" + username
+    });
+  };
+
   function listing(on, extras) {
     extras = extras || [];
     return withFilters(on, ["after", "before", "count", "limit", "show"].concat(extras));
