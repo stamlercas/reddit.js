@@ -276,6 +276,20 @@
         expect(requests.length).to.be.eql(1);
         expect(requests[0].url).to.be.eql("https://www.reddit.com/user/chromakode.json");
       });
+
+      it("should go to comments", function () {
+        reddit.user("chromakode", "comments").fetch();
+        expect(requests.length).to.be.eql(1);
+        expect(requests[0].url).to.be.eql("https://www.reddit.com/user/chromakode/comments.json");
+      });
+
+      it("should filter with limits", function () {
+        reddit.user("chromakode", "comments").limit(5).fetch();
+        expect(requests.length).to.be.eql(1);
+        expect(requests[0].url).to.be.eql("https://www.reddit.com/user/chromakode/comments.json?limit=5");
+      });
+
     });
+
   });
 })();
