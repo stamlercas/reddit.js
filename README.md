@@ -205,7 +205,7 @@ Fetch information about the user, including karma and gold status.
   reddit.aboutUser("chromakode").fetch();
 ```
 
-* [User Activity](https://www.reddit.com/dev/api/#GET_user_{username}_comments)
+* [User Activity](https://www.reddit.com/dev/api/#GET_user_{username}_{where})
 
 Fetch information about the user's activity. Supported second parameters are `overview`, `submitted`, `comments`, `upvoted`, `downvoted`, `hidden`, `saved`, and `gilded`. Filters such as `show`, `sort`, `t`, `type`, `username`, `after`, `before`, `count`, `limit`, and `sr_detail` are supported. Second parameter is optional.
 
