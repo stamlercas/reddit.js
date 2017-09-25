@@ -202,7 +202,7 @@ Fetch newest subreddits.
 Fetch information about the user, including karma and gold status.
 
 ```javascript
-  reddit.aboutUser("chromakode").fetch();
+  reddit.user("chromakode", "about").fetch();
 ```
 
 * [User Activity](https://www.reddit.com/dev/api/#GET_user_{username}_{where})
