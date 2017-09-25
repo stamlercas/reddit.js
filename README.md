@@ -204,6 +204,17 @@ Fetch information about the user, including karma and gold status.
 ```javascript
   reddit.aboutUser("chromakode").fetch();
 ```
+
+* [User Activity](https://www.reddit.com/dev/api/#GET_user_{username}_{where})
+
+Fetch information about the user's activity. Supported second parameters are `overview`, `submitted`, `comments`, `upvoted`, `downvoted`, `hidden`, `saved`, and `gilded`. Filters such as `show`, `sort`, `t`, `type`, `username`, `after`, `before`, `count`, `limit`, and `sr_detail` are supported. Second parameter is optional.
+
+```javascript
+  reddit.user('chromakode', 'comments').limit(1).fetch(function(res) {
+    // res contains JSON parsed response from Reddit
+    console.log(res);
+  });
+```
 # Contributing
 
 Pull requests are welcome. Reddit.js is built using `node` and `npm`. Once you have them installed you can run all tests with:
