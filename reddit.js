@@ -5,6 +5,7 @@
  */
  (function (window) {
   "use strict";
+  
   var reddit = window.reddit = {};
 
   reddit.hot = function (subreddit) {
@@ -114,13 +115,10 @@
     });
   };
 
-  reddit.aboutUser = function (username) {
-    return fetch({
-      resource: "user/" + username + "/about"
-    });
-  };
-
-  reddit.user = function (username, where = "") {
+  reddit.user = function (username, where) {
+    if (typeof callback === "undefined") {
+      where = "";
+    }
     var on = {
       resource: "user/" + username + "/" + where
     };
