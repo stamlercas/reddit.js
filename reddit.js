@@ -116,7 +116,7 @@
   };
 
   reddit.user = function (username, where) {
-    if (typeof callback === "undefined") {
+    if (typeof where === "undefined") {
       where = "";
     }
     var on = {
