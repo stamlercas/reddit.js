@@ -116,11 +116,8 @@
   };
 
   reddit.user = function (username, where) {
-    if (typeof where === "undefined") {
-      where = "";
-    }
     var on = {
-      resource: "user/" + username + "/" + where
+      resource: "user/" + username + ((typeof where === "undefined") ? "" : "/" + where)
     };
     return withFilters(on, ["show", "sort", "t", "type", "username", "after", "before", "count", "limit", "sr_detail"]);
   };

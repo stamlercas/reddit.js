@@ -262,14 +262,6 @@
       });
     });
 
-    describe("aboutUser", function () {
-      it("should hit the right endpoint", function () {
-        reddit.aboutUser("chromakode").fetch();
-        expect(requests.length).to.be.eql(1);
-        expect(requests[0].url).to.be.eql("https://www.reddit.com/user/chromakode/about.json");
-      });
-    });
-
     describe("user", function () {
       it("should hit the right endpoint", function () {
         reddit.user("chromakode").fetch();

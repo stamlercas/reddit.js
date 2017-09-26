@@ -197,17 +197,9 @@ Fetch newest subreddits.
   reddit.newSubreddits().limit(25).fetch();
 ```
 
-* [About user](https://www.reddit.com/dev/api/oauth#GET_user_{username}_about.json)
-
-Fetch information about the user, including karma and gold status.
-
-```javascript
-  reddit.user("chromakode", "about").fetch();
-```
-
 * [User Activity](https://www.reddit.com/dev/api/#GET_user_{username}_{where})
 
-Fetch information about the user's activity. Supported second parameters are `overview`, `submitted`, `comments`, `upvoted`, `downvoted`, `hidden`, `saved`, and `gilded`. Filters such as `show`, `sort`, `t`, `type`, `username`, `after`, `before`, `count`, `limit`, and `sr_detail` are supported. Second parameter is optional.
+Fetch information about the user's activity. Supported second parameters are `about`, `overview`, `submitted`, `comments`, `upvoted`, `downvoted`, `hidden`, `saved`, and `gilded`. Filters such as `show`, `sort`, `t`, `type`, `username`, `after`, `before`, `count`, `limit`, and `sr_detail` are supported. Second parameter is optional.
 
 ```javascript
   reddit.user('chromakode', 'comments').limit(1).fetch(function(res) {
